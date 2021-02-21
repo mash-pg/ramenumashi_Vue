@@ -31,10 +31,8 @@ Route::namespace('Shop')->prefix('shop')->name('shop.')->group(function () {
         'confirm'  => false,
         'reset'    => false
     ]);
-
     // ログイン認証後
     Route::middleware('auth:shop')->group(function () {
-
         // TOPページ
         Route::resource('home', 'HomeController', ['only' => 'index']);
 

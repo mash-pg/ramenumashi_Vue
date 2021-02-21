@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Shop;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -15,7 +16,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('shop.home');
+        $user = Auth::user(); // 現在認証ユーザー取得
+        return view('shop.home',compact('user'));
     }
-
+    
 }
