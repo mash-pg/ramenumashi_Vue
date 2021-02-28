@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Log;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -21,13 +22,14 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/user/home';
 
     /**
      * The path to the "home" route for your application.
      *
      * @var string
      */
+    
     public const Shop_HOME = '/shop/home';
 
     /**

@@ -1,23 +1,17 @@
 @extends('layouts.user.app')
+@include('layouts.user.header')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+    <div id="app">
+        <nav class="main-wrapper">
+            <router-link to="/user/home">Home</router-link>
+            <router-link to="/user/about">About</router-link>
+            <router-link to="/user/shops">ユーザ一覧</router-link>
+            <router-view/>
             </div>
-        </div>
+        </nav>
     </div>
-</div>
+<script src="{{ mix('js/app.js') }}"></script> 
 @endsection
+
+@include('layouts.user.footer')

@@ -5,7 +5,10 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Session\TokenMismatchException;
 use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
 
 class Handler extends ExceptionHandler
 {
@@ -52,6 +55,18 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        Log::info('Exception Mash :  '.$exception);
+        if ($exception instanceof TokenMismatchException) {
+
+            return response()->view('error.419');
+        }
+        if($exception instanceof NotFoundHttpException){
+            return response()->view('error.404');
+        }
+        if($exception instanceof RouteNotFoundException){
+            Log::info('Routeエラーだよ');
+            return response()->view('error.500');
+        }
         return parent::render($request, $exception);
     }
 }
