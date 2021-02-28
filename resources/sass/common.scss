@@ -1,0 +1,183 @@
+@media screen and (min-width:1024px) {
+    /*
+        共通
+    */    
+    .btn.btn-primary{
+        background-color: #131313;
+        border-color: #131313;
+    }
+    /*
+        header
+    */
+    .header-img{
+        height: 30vw;
+        background: url('./../img/main/ramen.jpg') top center / cover no-repeat;
+        h1.header-title{
+            padding: 7vw;
+            text-align: center;
+            a {
+                color: #fafafa;
+                text-decoration: none;
+                font-size: 4vw;
+                -webkit-text-stroke:2px #000000;
+            }
+        }
+    }
+    .user-name{
+        margin: 0 auto;
+    }
+    .header-flex{
+        display: flex;
+        justify-content: center;
+    }
+    .header-nav{
+        list-style-type: none;
+        padding-left: 0;
+        a{
+            color: #131313;
+            padding:0.5vw;
+            text-decoration: none;
+            background-color: #fafafa;
+            opacity: 0.8;
+            border-radius: 1vw;
+            font-size: 1.5vw;
+        }
+        ul{   
+            list-style: none;
+            display:flex;
+            li{
+                margin-left: 3vw;
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    /*
+    footer
+    */
+    footer {
+        background-color: rgba(115,78,48,0.7);
+        height: 28vw;
+        margin-top: 5vw;
+
+        .footer-nav-list ,.footer-nav-list-1{
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .footer-cp {
+            text-align: center;
+            margin-bottom: 2vw;
+        }
+
+        .footer-umashi {
+            padding-top: 2vw;
+            padding-bottom: 2vw;
+            width: 60vw;
+            text-align: center;
+            margin: 0 auto;
+            border-bottom: 1px solid #fafafa;
+        }
+
+        .footer-nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            
+        }
+        .footer-nav-list-1 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 0px;
+            justify-content:space-around;
+            
+        }
+        .footer-nav-list{
+            margin-top: 3vw;
+        }
+        .footer-nav-list-1{
+            margin-top: 10px;
+        }
+        .footer-nav {
+            display: flex;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            list-style: none;
+            flex-wrap: wrap;
+            margin-right: 4vw;
+        }
+        .footer-nav li {
+            margin-left: 2.2vw;
+        }
+
+        .footer-nav a {
+            color:#432;
+        }
+
+        .footer-nav-1 {
+            display: flex;
+            font-size: 10px;
+            text-transform: uppercase;
+            margin-top: 1.8vw;
+            margin-right: 5vw;
+            list-style: none;
+        }
+        .footer-nav-1 li {
+            margin-left: 2.5vw;
+        }
+
+        .footer-nav-1 a {
+            color:#432;
+        }
+
+        .footer-nav-1 a:hover {
+            opacity: 0.6;
+        }
+    }
+
+    /*
+        login
+    */
+    .container{
+        margin-top: 5vw;
+    }
+    div.card-header{
+        color: blanchedalmond;
+        background-color: #734e30;
+        opacity: 0.7;
+    }
+    .card{
+        margin: 0 auto;
+        width: 40vw;
+    }
+    /*
+        register
+    */
+
+}
+// ipadプロ
+@media screen and (min-width:1024px) and (min-height:1366px) {
+    /*
+    footer
+    */
+    footer {
+        height: 31vw;
+        margin-top: 55vw;
+    }
+    /*
+    login
+    */
+    .container{
+        margin-top: 35vw;
+    }
+    div.card-header{
+        color: blanchedalmond;
+        background-color: #734e30;
+        opacity: 0.7;
+    }
+    .card{
+        margin: 0 auto;
+        width: 40vw;
+    }
+}
