@@ -9,14 +9,27 @@ use Illuminate\Notifications\Notifiable;
 class Shop extends Authenticatable
 {
     use Notifiable;
-
+    protected $table = 'shop_tb';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'shop_id' ,
+        'password',
+        'email',
+        'area_id',
+        'shop_name',
+        'shop_tel',
+        'shop_address',
+        'seat',
+        'show_data',
+        'dlflag',
+        'avarage_price',
+        'img',
+        'img1',
+        'img2'
     ];
 
     /**

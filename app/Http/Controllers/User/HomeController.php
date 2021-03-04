@@ -20,11 +20,4 @@ class HomeController extends Controller
         return view('user.home');
     }
     
-    // public function welcome()
-    // {
-    //     Log::info('message1234');
-        
-    //     return view('user.welcome');
-    // }
-
 }

@@ -1,11 +1,11 @@
 @section('header')
 <div class="header-img">
+    @guest('user')
     <h1 class="header-title">
         <a href="{{ url('/user/home') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
     </h1>
-    @guest('user')
     <nav class="header-nav">
         <ul class="header-flex">
             <li><a href="{{ route('user.login') }}">{{ __('ログイン') }}</a></li>
@@ -14,12 +14,22 @@
                     <a href="{{ route('user.register') }}">{{ __('会員登録') }}</a>
             @endif
             </li>
-            <li><a href="#">ラーメン検索</a></li>
+            <li><a href="https://ramenumashi/user/shops">ラーメン検索</a></li>
             <li><a href="#">RAMENUMASHIについて</a></li>
             <li><a href="#">ラーメン店主様ご利用の場合</a></li>
         </ul>
     </nav>
     @else
+    <div class="user-name">
+        <div class="user-name-1">
+            {{ Auth::user()->user_name }}様
+        </div>
+    </div>
+    <h1 class="header-title">
+        <a href="{{ url('/user/home') }}">
+            {{ config('app.name', 'Laravel') }}
+        </a>
+    </h1>
     <nav class="header-nav">
         <ul class="header-flex">
             <li><a href="#">ラーメン検索</a></li>
@@ -38,9 +48,6 @@
             </li>
         </ul>
     </nav>
-</div>
-<div class="user-name">
-    {{ Auth::user()->user_name }}
 </div>
 @endguest
 @endsection

@@ -1,16 +1,46 @@
 @extends('layouts.user.app')
 @include('layouts.user.header')
-
 @section('content')
+    @guest('user')
     <div id="app">
         <nav class="main-wrapper">
-            <router-link to="/user/home">Home</router-link>
-            <router-link to="/user/about">About</router-link>
-            <router-link to="/user/shops">ユーザ一覧</router-link>
+            <div id="main-box-home">
+                <router-link to="/user/home">Home</router-link>
+            </div>
+            <div id="main-box-about">
+                <router-link to="/user/about">予約状況・お気に入り状況</router-link>
+            </div>
+            <div id="main-box-kutikomi">
+                <router-link to="/user/about">口コミ</router-link>
+            </div>
+            <div id="main-box-shoplist">
+                <router-link to="/user/shops" >お店一覧</router-link>
+            </div>
+            </nav>
             <router-view/>
             </div>
-        </nav>
     </div>
+    @else
+    <div id="app">
+        <nav class="main-wrapper">
+            <div id="main-box-home">
+                <router-link to="/user/home">Home</router-link>
+            </div>
+            <div id="main-box-about">
+                <router-link to="/user/about">予約状況・お気に入り状況</router-link>
+            </div>
+            <div id="main-box-kutikomi">
+                <router-link to="/user/about">口コミ</router-link>
+            </div>
+            <div id="main-box-shoplist">
+                <router-link to="/user/shops" >お店一覧</router-link>
+            </div>
+            </nav>
+            {{-- お店一覧 --}}
+            <router-view/>
+            </div>
+    </div>
+    @endguest
 <script src="{{ mix('js/app.js') }}"></script> 
 @endsection
 

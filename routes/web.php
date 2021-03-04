@@ -8,6 +8,9 @@ Route::get('user/{any}', function () {
     return view('user/home');
 })->where('any','.*');
 
+// Route::get('user/{any}', function () {
+//     return view('user/home');
+// })->where('any','.*');
 
 // ユーザー
 Route::namespace('User')->name('user.')->group(function () {

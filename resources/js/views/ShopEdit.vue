@@ -5,8 +5,8 @@
 	<p>Shop Id: {{ shop.id }}</p>
 	<form @submit.prevent="updateShop">
 		<div class="form-group">
-			<label for="name">Name:</label>
-			<input v-model="shop.name">
+			<label for="shop_name">Name:</label>
+			<input v-model="shop.shop_name">
 		</div>
 		<div class="form-group">
 			<label for="email">Email:</label>
@@ -19,13 +19,14 @@
 </template>
 
 <script>
+/* eslint-disable no-console */
 	export default {
 		data(){
 			return {
 				id: this.$route.params.id,
 				shop:{
 					id:'',
-					name: '',
+					shop_name: '',
 					email:''
 				}
 			}

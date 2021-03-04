@@ -3,7 +3,7 @@
 	<h1>お店詳細</h1>
 	
 		<li>Shop Id: {{ shop.id }}</li>
-		<li>Shop Name: {{ shop.name }}</li>
+		<li>Shop Name: {{ shop.user_name }}</li>
 		<li>Shop Email: {{ shop.email }}</li>
 </div>
 </template>

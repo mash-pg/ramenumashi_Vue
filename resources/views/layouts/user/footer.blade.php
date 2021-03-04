@@ -51,6 +51,5 @@
 </footer>
 <div id="page_top"><a href="#"></a></div>
 </div>
-<script type="text/javascript" src="check.js"></script>
 @endsection
 @endsection
